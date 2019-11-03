@@ -17,7 +17,7 @@ def assert_equals(a,b):
 # interactive zn proof
 # Peggy wants to prove she knows the discrete log x (pvte to Peggy) of y w.r.t g   (y = g^x)
 # for  base g  in some finite Abelian group G of prime order p.
-# she picks a random k {   ??book says k should be from the Z/pZ bucket but any k works because k and c drop out}
+# she picks a random k {   k should be from the Z/pZ bucket but any k works because k and c drop out}
 # and computes t = g^k and sends it to Victor
 g = 2
 x = 3    # private to Peggy but has to be initialised in Py 
@@ -31,7 +31,7 @@ t = pow(g, k)           # commitment
 c = randint(1,9)
 #print(c)
 
-# Peggy computes her response modulo p
+# Peggy computes her response (modulo p if you draw from Z/pZ)
 s = k + c*x
 
 # Victor accepts if g^s == t*(y^c)    i.e if x == 
