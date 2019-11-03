@@ -34,7 +34,7 @@ c = randint(1,9)
 # Peggy computes her response (modulo p if you draw from Z/pZ)
 s = k + c*x
 
-# Victor accepts if g^s == t*(y^c)    i.e if x == 
+# Victor accepts if g^s == t*(y^c)    
 print(pow(g, s))
 print( t*pow(y, c))
 
